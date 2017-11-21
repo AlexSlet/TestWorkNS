@@ -1,0 +1,213 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+a
+	text-decoration: none
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	margin: 0
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.header
+	min-height: 100vh
+	position: relative
+	background: rgba(#563813, .6)
+	background-image: url(../img/bottom-line.png)
+	background-position: bottom
+	background-repeat: no-repeat
+	background-size: contain
+	&:before
+		content: '\f107'
+		position: absolute
+		font-family: 'font-awesome'
+		font-weight: 300
+		bottom: 15px
+		left: calc(50% - 5px)
+		color: #fff
+
+.header-top
+	display: flex
+	justify-content: space-between
+	padding: 20px 0
+	border-bottom: 1px solid rgba(#999, .7)
+	.header-logo
+		color: #fff
+		font-size: 30px
+	.header-nav
+		display: flex
+		align-items: baseline
+		ul
+			list-style: none
+			display: flex
+			li
+				a
+					color: #fff
+					font-size: 13px
+					padding: 10px 15px
+					border-radius: 5px
+					&:hover
+						background: $accent1
+					&:active
+						background: darken($accent1, 10%)
+.button
+	border: none
+	outline: none
+	color: #fff
+	background: $accent1
+	font-size: 13px
+	padding: 10px 15px
+	border-radius: 5px
+	margin-left: 40px
+	&:hover
+		background: lighten($accent1, 10%)
+	&:active
+		background: darken($accent1, 10%)
+
+.header-body
+	margin-top: 10%
+	text-align: center
+	h1
+		color: #fff
+		font-weight: 400
+		line-height: 1.2
+	p
+		color: #C3C0A6
+		font-weight: lighter
+		font-size: 14px
+	.search-form
+		.search
+			border: none
+			outline: none
+			padding: 16px 15px 16px 30px
+			width: 37%
+			border-top-left-radius: 5px
+			border-bottom-left-radius: 5px
+		.search-button
+			color: #fff
+			background: $accent2
+			border: none
+			outline: none
+			padding: 16px 60px
+			margin-left: -5px
+			border-bottom-right-radius: 5px
+			border-top-right-radius: 5px
+			cursor: pointer
+			&:hover
+				background: darken($accent2, 10%)
+			&:active
+				background: lighten($accent2, 10%)
+
+.hamburger
+	display: none
+	position: fixed
+	width: 60px
+	height: 60px
+	left: 120px
+	top: 15px
+	z-index: 999
+	.hamburger-box
+		position: absolute
+		top: 22px
+		.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+			background: #fff
+			width: 30px
+			height: 3px
+		.hamburger-inner::before
+			top: 8px
+		.hamburger-inner::after
+			top: 17px
+
+.professional
+	background: #fff
+	text-align: center
+	padding-top: 30px
+	padding-bottom: 90px
+	h2
+		font-weight: 400
+		line-height: 1.2
+		margin-bottom: 60px
+	.professional-item
+		padding: 0 55px
+		h3
+			font-size: 18px
+			font-weight: 600
+			margin: 0
+		p 
+			margin: 0
+			font-size: 14px
+			color: #7d7d7d
+
+.plan
+	background: #f5f5f5
+	padding-top: 60px
+	text-align: center
+	padding-bottom: 95px
+	h2
+		font-family: $default-font
+		line-height: 1.2
+		margin-bottom: 60px
+
+	.plan-item
+		background: #fff
+		border-radius: 5px
+		padding: 40px
+		margin-bottom: 60px
+		.fa
+			font-size: 60px
+			color: $accent2
+		h3
+			line-height: 1.2
+		p 
+			margin: 0
+			font-size: 14px
+			color: #7d7d7d
+
+	.plan-button
+		padding: 20px 65px
+		
+@import "media" // Всегда в конце
