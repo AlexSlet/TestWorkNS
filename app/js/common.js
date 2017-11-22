@@ -7,4 +7,11 @@
         "filename": "cloud",
         "types": ["mp4","ogg","webm"]
       });
+
+  $('.hamburger').click(function(){
+		$('.menu-burger').addClass('is-active');
+	});
+	$('.close').click(function(){
+		$('.menu-burger').removeClass('is-active');
+	});
 });
